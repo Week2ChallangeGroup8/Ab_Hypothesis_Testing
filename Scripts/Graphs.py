@@ -61,6 +61,11 @@ class draw:
         plt.title(f'Distribution of User {column}', size=20, fontweight='bold')
         plt.xlabel('Number of Users')
         plt.show()
+    
+    def plot_dist(df: pd.DataFrame, column: str):
+        plt.figure(figsize=(9, 7))
+        sns.distplot(df).set_title(f'Distribution of {column}')
+        plt.show()
 
 
     def plot_heatmap(df: pd.DataFrame, title: str, cbar=False) -> None:
